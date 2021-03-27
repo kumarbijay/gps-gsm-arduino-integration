@@ -94,7 +94,7 @@ void SIM900INIT( char msg[] )
 
 SIM900.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
   delay(1000);  // Delay of 1000 milli seconds or 1 second
-  SIM900.println("AT+CMGS=\"+919114151322\"\r"); // Replace x with mobile number
+  SIM900.println("AT+CMGS=\""\r"); // Replace x with mobile number
   delay(1000);
   SIM900.println("HELP SMITA!");
   SIM900.println("GMAPS:");
@@ -131,7 +131,7 @@ SIM900.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
     SIM900.println( F("AT+HTTPPARA=\"CID\",1") );
     delay(1000);
   
-    SIM900.println( F("AT+HTTPPARA=\"URL\",\"your.domain/server.php?latitude=21.49&longitude=83.90\"") );
+    SIM900.println( F("AT+HTTPPARA=\"URL\",\"/server.php?latitude=21.49&longitude=83.90\"") );
     delay(1000);
 
   
